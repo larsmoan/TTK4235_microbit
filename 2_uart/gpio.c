@@ -34,3 +34,11 @@ void gpio_lights_off(){
    GPIO0->OUTCLR = (1<<24);
    GPIO0->OUTCLR = (1<<19);
 };
+
+void gpio_toggle(){
+	GPIO0->OUTSET ^= (1<<21);
+    GPIO0->OUTSET ^= (1<<22);
+    GPIO0->OUTSET ^= (1<<15);
+    GPIO0->OUTSET ^= (1<<24);
+    GPIO0->OUTSET ^= (1<<19);
+}
