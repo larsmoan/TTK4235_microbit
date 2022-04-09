@@ -17,7 +17,7 @@ int main(){
         }
         
         if (uart_read() != '\0'){
-            gpio_toggle();
+            gpio_lights_toggle();
         }
 
     }

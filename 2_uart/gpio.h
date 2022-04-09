@@ -38,7 +38,7 @@ typedef struct {
 void gpio_init();
 void gpio_lights_on();
 void gpio_lights_off();
-void gpio_toggle();
+void gpio_lights_toggle();
 
 
 #endif

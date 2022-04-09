@@ -8,7 +8,6 @@ void uart_init(){
     //UART_INT_TX
     GPIO1->PIN_CNF[8] = 1;
 
-    //Gjøre noe med PSELTXD og RXD, what to do?
     UART0->PSEL_TXD = 0x28;
    
     //B og pin 6 høy
@@ -21,10 +20,8 @@ void uart_init(){
     UART0->PSEL_RTS = 1 << 31;
     UART0->PSEL_CTS = 1 << 31;
 
-    //Mulig den skal sette enable etc
     UART0->ENABLE = 4;  
 
-     //Eget enable register?
     UART0->TASKS_STARTRX = 1;
 }
 
